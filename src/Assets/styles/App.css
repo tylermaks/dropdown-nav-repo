@@ -1,0 +1,238 @@
+*, *::after, *::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+}
+
+html, body, .App {
+  height: 100vh;
+  width: 100%;
+}
+
+body {
+  background-color: #fafafa;
+  font-family: "Epilogue", sans-serif;
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+p {
+  color: dimgray;
+  line-height: 1.5;
+  margin: 1.5rem 0;
+}
+
+a {
+  color: dimgray;
+  text-decoration: none;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  background: #141414;
+  border: none;
+  border-radius: 15px;
+  color: #fafafa;
+  cursor: pointer;
+  font-family: "Epilogue", sans-serif;
+  font-size: 18px;
+  padding: 1em;
+  width: 150px;
+}
+
+section, nav {
+  margin: 0 auto;
+  max-width: 500px;
+  width: 100%;
+}
+
+section {
+  height: 90%;
+}
+
+.nav-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 10%;
+  padding: 1rem;
+}
+
+.mobile-hero-img {
+  width: 100%;
+}
+
+.desktop-hero-img {
+  display: none;
+}
+
+.inner-container {
+  margin: 1.5rem auto;
+  text-align: center;
+  width: 90%;
+}
+
+.client {
+  width: 20%;
+}
+
+.social-proof {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 2rem;
+}
+
+@media screen and (min-width: 1000px) {
+  section {
+    max-width: 1250px;
+    width: 80%;
+  }
+  h1 {
+    font-size: 4.85rem;
+  }
+  p {
+    font-size: 18px;
+    margin: 2.5rem 0;
+    width: 75%;
+  }
+  .nav-bar {
+    padding: 0 2rem;
+    position: relative;
+    max-width: 1440px;
+    width: 100%;
+  }
+  .nav-inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 45%;
+  }
+  .nav-inner--left {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .nav-inner--right {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .menu {
+    display: none;
+  }
+  .arrow {
+    margin-left: 0.5em;
+  }
+  .list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    margin: 0 4rem;
+  }
+  .register-btn {
+    background-color: #fafafa;
+    border: 1px solid dimgray;
+    color: dimgray;
+    font-size: unset;
+    padding: 1em;
+    margin-left: 2rem;
+    width: 100px;
+  }
+  .hero-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+  .mobile-hero-img {
+    display: none;
+  }
+  .desktop-hero-img {
+    display: block;
+    height: 100%;
+  }
+  .inner-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0 0 2rem 0;
+    width: 50%;
+  }
+  .inner-container--img {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .inner-container--text {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    padding-right: 5%;
+    text-align: left;
+  }
+  .hero-text, .social-proof {
+    margin-top: auto;
+  }
+  .social-proof {
+    width: 90%;
+  }
+  .dropdown {
+    position: absolute;
+    top: 75px;
+    left: 0;
+    height: 200px;
+    width: 200px;
+  }
+  .dropdown--0 {
+    background-color: #141414;
+  }
+  .dropdown--1 {
+    background-color: blue;
+  }
+}
+/*# sourceMappingURL=App.css.map */
