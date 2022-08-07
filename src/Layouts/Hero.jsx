@@ -1,5 +1,6 @@
 import React from 'react'
 
+import "../Assets/styles/Hero/Hero.css"
 import mobileHeroImg from "../Assets/images/image-hero-mobile.png"
 import desktopHeroImg from "../Assets/images/image-hero-desktop.png"
 import audiophile from "../Assets/images/client-audiophile.svg"
@@ -28,7 +29,11 @@ function Hero(){
                     {clients.map(client => {
                         return (
 
-                            <img className="client" src={client} alt="Client Logo" />
+                            <img 
+                                className="client" 
+                                src={client} 
+                                alt="Client Logo" 
+                            />
 
                         )
                     })}

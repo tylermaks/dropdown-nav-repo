@@ -1,6 +1,7 @@
 import React, {useState} from "react"
-
 import DropDown from "./DropDown"
+import Login from "./Login"
+import "../Assets/styles/NavBar/NavBar.css"
 
 import logo from "../Assets/images/logo.svg"
 import menu from "../Assets/images/icon-menu.svg"
@@ -8,18 +9,18 @@ import arrowIcon from "../Assets/images/icon-arrow-down.svg"
 
 
 
-function NavBar(){
+function NavBar(props){
     
-    const links = ["Features", "Company", "Careers", "About"]
-
     const [selected, setSelected] = useState(null)
     const [open, setOpen] = useState(true)
 
     const handleClick = i => {
         if(selected === i){ 
             setOpen(!open)
+        } else if(selected !== i){
+            setOpen(true)
         }
-
+        
         setSelected(i)
     }
 
@@ -30,7 +31,7 @@ function NavBar(){
                 <div className="list-container">
                     <ul className="list">
                         {
-                            links.map((link, index) => {
+                            props.links.map((link, index) => {
 
                                 const arrow = index <= 1 ? <img key={index} className="arrow" src={arrowIcon} alt="Arrow" /> :null;
 
@@ -45,7 +46,7 @@ function NavBar(){
                     </ul>
 
                         {
-                            links.slice(0,2).map((link, index) => (
+                            props.links.slice(0,2).map((link, index) => (
                                 <DropDown
                                     key={index}
                                     id={index}
@@ -60,9 +61,13 @@ function NavBar(){
             </div>
 
             <div className="nav-inner nav-inner--right">
-                <img className="menu" src={menu} alt="Hamburger Menu" />
-                <a className="login" href=".main">Login</a>
-                <button className="register-btn">Register</button>
+                <img 
+                    onClick={props.clicked}
+                    className="menu" 
+                    src={menu} 
+                    alt="Hamburger Menu" 
+                />
+                <Login id="desktop-login"/>
             </div>
        
         </nav>

@@ -1,0 +1,58 @@
+//NAVBAR COMPONENT
+.nav-bar{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+
+    height:10%;
+    padding: 1rem;
+}
+
+.list-container{
+    display:none;
+}
+
+
+//DESKTOP
+@media screen and (min-width:1000px) {
+
+    .nav-bar{
+        padding:1rem 2rem;
+        position: relative;
+        min-width: 1100px;
+        max-width: 1440px;
+        width: 100%;
+    }
+
+    .nav-inner{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &--left{
+            justify-content: space-between;
+            width: 48%;
+        }
+
+        &--right{
+            justify-content: flex-end;
+            flex:1;
+        }
+    }
+
+    .menu{
+        display:none;
+    }
+
+    .list-container{
+        display:block;
+        position: relative;
+        min-width: 500px;
+        margin-left: 2rem;
+    }
+
+    .list{ 
+        display: flex;
+        justify-content: space-between;
+    }
+}

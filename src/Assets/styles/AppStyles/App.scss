@@ -1,0 +1,95 @@
+//VARIABLES
+$white: hsl(0, 0%, 98%);
+$mdGray: hsl(0, 0%, 41%);
+$black:hsl(0, 0%, 8%);
+
+
+//SETUP
+*, *::after, *::before{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html, body, .App{
+    height: 100vh;
+    max-width: 100%;
+}
+
+body{
+    background-color: $white;
+    font-family: "Epilogue", sans-serif;
+    font-weight: 500;
+}
+
+//+++++++++++++++++++++
+//++++MOBILE STYLES++++
+//+++++++++++++++++++++
+//TEXT & REUABLES
+h1{ 
+    font-size: 2rem;
+}
+
+p, span{
+    color:$mdGray;
+    line-height: 1.5;
+    margin: 1.5rem 0;
+}
+
+a{
+    color:$mdGray;
+    text-decoration: none;
+}
+
+ul{
+    padding: 0;
+}
+
+li{ 
+    color:$mdGray;
+    cursor: pointer;
+    list-style: none;
+}
+
+button{
+    background: $black;
+    border:none;
+    border-radius: 10px;
+    color: $white;
+    cursor: pointer;
+    font-family: "Epilogue", sans-serif;
+    font-size: 18px;
+    padding: 1em;
+    width: 150px;
+}
+
+section, nav{ 
+    margin: 0 auto;
+    max-width: 700px;
+    width: 100%;
+}
+
+
+//++++++++++++++++++++++
+//++++DESKTOP STYLES++++
+//++++++++++++++++++++++
+@media screen and (min-width:1000px) {
+    //TEXT AND REUSABLES
+    section{ 
+        max-width: 1250px;
+        width: 80%;
+    }
+
+    h1{ 
+        font-size: 4.85rem;
+    }
+
+    p{ 
+        font-size: 18px;
+        margin: 2.5rem 0;
+        width: 75%;
+    }
+}
+
+
+
+  

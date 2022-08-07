@@ -1,12 +1,29 @@
-import React from "react"
+import React, {useState} from "react"
 import NavBar from "../Components/NavBar";
 import Hero from "./Hero";
-import '../Assets/styles/App.css';
+import MobileMenu from "./MobileMenu";
+
+import '../Assets/styles/AppStyles/App.css';
 
 function App() {
+  const links = ["Features", "Company", "Careers", "About"]
+  const [mobileMenu, setMobileMenu] = useState(false)
+
+  const toggleMenu = () => {
+    setMobileMenu(!mobileMenu)
+  }
+
   return (
     <main className="App">
-      <NavBar />
+      <MobileMenu 
+        links={links} 
+        clicked={toggleMenu}
+        mobileMenu={mobileMenu}
+      />
+      <NavBar 
+        links={links} 
+        clicked={toggleMenu}
+      />
       <Hero />
     </main>
   );

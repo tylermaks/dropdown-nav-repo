@@ -1,4 +1,5 @@
 import React from "react"
+import "../Assets/styles/DropDown/DropDown.css"
 
 import dropdownData from "./dropdownData"
 

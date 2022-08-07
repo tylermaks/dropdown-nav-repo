@@ -1,0 +1,32 @@
+.dropdown-link {
+  cursor: pointer;
+  margin: 1em;
+}
+
+.icon {
+  margin-right: 1em;
+}
+
+@media screen and (min-width: 1000px) {
+  #Features {
+    left: -45px;
+  }
+  #Company {
+    left: 140px;
+  }
+  .dropdown {
+    display: none;
+    position: absolute;
+    top: 25px;
+    border-radius: 15px;
+    padding: 0 1rem;
+    width: auto;
+  }
+  .dropdown--active {
+    display: block;
+    background-color: #fff;
+    -webkit-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+}
+/*# sourceMappingURL=DropDown.css.map */
