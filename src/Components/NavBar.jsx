@@ -9,49 +9,62 @@ import arrowIcon from "../Assets/images/icon-arrow-down.svg"
 
 
 function NavBar(){
-    const links = ["Features", "Company", "Career", "About"];
+    
+    const links = ["Features", "Company", "Careers", "About"]
 
     const [selected, setSelected] = useState(null)
+    const [open, setOpen] = useState(true)
 
     const handleClick = i => {
-        if(i > 1){ 
-            return null
+        if(selected === i){ 
+            setOpen(!open)
         }
 
         setSelected(i)
-        console.log(selected)
     }
 
     return(
         <nav className="nav-bar">
             <div className="nav-inner nav-inner--left">
                 <img className="logo" src={logo} alt="Logo" />
-                <ul className="list">
+                <div className="list-container">
+                    <ul className="list">
+                        {
+                            links.map((link, index) => {
 
-                    {links.map((link, index) => {
-                        const arrow = index <=1 ? <img className="arrow" src={arrowIcon} alt="Arrow" /> : null;
+                                const arrow = index <= 1 ? <img key={index} className="arrow" src={arrowIcon} alt="Arrow" /> :null;
 
-                        return(
+                                return(
+                                    <li key={index} className="nav-link" onClick={() => handleClick(index)}>
+                                        {link} {arrow}
+                                    </li>
+                                )
+                            })
+                        }
 
-                            <li onClick={() => handleClick(index)} className="link">
-                                <a  id={index} href=".main">{link}{arrow}</a>
-                            </li>
-                            )
-                        })
-                    }
-                   
-                </ul>
+                    </ul>
+
+                        {
+                            links.slice(0,2).map((link, index) => (
+                                <DropDown
+                                    key={index}
+                                    id={index}
+                                    link={link}
+                                    selected={selected}
+                                    open={open}
+                                />
+                            ))
+
+                        }
+                </div>
             </div>
 
             <div className="nav-inner nav-inner--right">
                 <img className="menu" src={menu} alt="Hamburger Menu" />
-                <a href=".main">Login {selected}</a>
+                <a className="login" href=".main">Login</a>
                 <button className="register-btn">Register</button>
             </div>
-
-            <DropDown
-                navSelect={selected}
-            />
+       
         </nav>
     )
 }

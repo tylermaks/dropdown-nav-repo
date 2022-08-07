@@ -35,6 +35,8 @@ ul {
 }
 
 li {
+  color: dimgray;
+  cursor: pointer;
   list-style: none;
 }
 
@@ -72,6 +74,10 @@ section {
           justify-content: space-between;
   height: 10%;
   padding: 1rem;
+}
+
+.list, .login, .register-btn, .dropdown {
+  display: none;
 }
 
 .mobile-hero-img {
@@ -121,6 +127,7 @@ section {
   .nav-bar {
     padding: 0 2rem;
     position: relative;
+    min-width: 1100px;
     max-width: 1440px;
     width: 100%;
   }
@@ -134,23 +141,28 @@ section {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    width: 45%;
   }
   .nav-inner--left {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    width: 48%;
   }
   .nav-inner--right {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
   }
   .menu {
     display: none;
   }
-  .arrow {
-    margin-left: 0.5em;
+  .list-container {
+    position: relative;
+    min-width: 500px;
+    margin-left: 2rem;
   }
   .list {
     display: -webkit-box;
@@ -159,10 +171,6 @@ section {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
-    margin: 0 4rem;
   }
   .register-btn {
     background-color: #fafafa;
@@ -221,18 +229,37 @@ section {
   .social-proof {
     width: 90%;
   }
+  #Features {
+    left: -25px;
+  }
+  #Company {
+    left: 155px;
+  }
   .dropdown {
+    display: none;
     position: absolute;
-    top: 75px;
-    left: 0;
-    height: 200px;
-    width: 200px;
+    top: 25px;
+    border-radius: 15px;
+    padding: 0 1rem;
+    width: auto;
   }
-  .dropdown--0 {
-    background-color: #141414;
+  .dropdown--active {
+    display: block;
+    background-color: #fff;
+    -webkit-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   }
-  .dropdown--1 {
-    background-color: blue;
+  .dropdown-container {
+    position: absolute;
+    left: 17.5%;
+    width: 400px;
+  }
+  .dropdown-link {
+    cursor: pointer;
+    margin: 1em 0;
+  }
+  .icon {
+    margin-right: 1em;
   }
 }
 /*# sourceMappingURL=App.css.map */
